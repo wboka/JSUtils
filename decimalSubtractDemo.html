@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>decimalSubtract() Demo</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/prettify.css">
+        
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="js/prettify.js"></script>
+        <script src="js/decimalSubtract.js"></script>
+    </head>
+    <body onload="prettyPrint()">
+    	<div class="container">
+            <div class="page-heading">
+                <h1>decimalSubtract(number1, number2) <small>Decimal</small></h1>
+            </div>
+            <p>This function accepts two parameters (number1, number2). <code>number2</code> is subtracted from <code>number1</code>.</p>
+            <h3>Code</h3>
+            <pre class="prettyprint linenums">
+                var standardResult = 456.456 - 456.123; 		// standardResult should return 0.333 but it doesn't :(
+                var decimalResult = decimalSubtract(456.456, 456.123);	// decimalResult will return 0.333 :)
+            </pre>
+            <h3>Example</h3>
+            <div class="well">
+            	<script>
+					var standardResult = 456.456 - 456.123; 		// standardResult should return 0.333 but it doesn't :(
+                	var decimalResult = decimalSubtract(456.456, 456.123);	// decimalResult will return 0.333 :)
+					
+					document.write("<p>456.456 - 456.123 becomes " + standardResult + "</p>");
+					document.write("<p>decimalSubtract(456.456, 456.123) becomes " + decimalResult + "</p>");
+				</script>
+            </div>
+            <hr />
+        </div>
+    </body>
+</html>

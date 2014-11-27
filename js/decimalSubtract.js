@@ -1,6 +1,6 @@
-function decimalSubtract(num1, num2) {
-    var firstNumberParts = num1.toString().split(".");
-    var secondNumberParts = num2.toString().split(".");
+function decimalSubtract(number1, number2) {
+    var firstNumberParts = number1.toString().split(".");
+    var secondNumberParts = number2.toString().split(".");
     
 	var firstDecimalPlaces = 0,
         secondDecimalPlaces = 0;
