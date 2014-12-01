@@ -1,7 +1,7 @@
 /*
  *  jsDecimalMath - plugin by Wayne Boka (@wboka)
  *  Documentation found at https://github.com/wboka/JSUtils/blob/master/js/jsDecimalMath.js
- *  Version 1.0
+ *  Version 1.1.0
  */
 function jsDecimalMath(left, right, operand) {
     // Get the numbers from the left and right of the decimal for each number passed in
@@ -21,9 +21,14 @@ function jsDecimalMath(left, right, operand) {
 		return n * commonFactor;
 	}
 	
-	// Divide both numbers by the commonFactor
 	function makeFloat(n) {
-		return n / commonFactor;
+		if (operand == "*") {
+			return n / Math.pow(commonFactor, 2);
+		} else if (operand == "/") {
+			return n;
+		} else {
+			return n / commonFactor;
+		}
 	}
 	
 	var retValue = null;
