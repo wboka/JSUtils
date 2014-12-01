@@ -3,4 +3,4 @@
 
 JavaScript Utilities
 
-- jsDecimalMath: js Plugin to fix incorrect floating-point math
+* jsDecimalMath: js Plugin to fix incorrect floating-point math
