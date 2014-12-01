@@ -1,0 +1,6 @@
+= JSUtils =
+=======
+
+JavaScript Utilities
+
+- jsDecimalMath: js Plugin to fix incorrect floating-point math
