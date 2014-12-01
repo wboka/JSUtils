@@ -1,11 +1,11 @@
 function jsDecimalMath(left, right, operand) {
-	var leftNumberParts = left.toString().split(".");
+    var leftNumberParts = left.toString().split(".");
     var rightNumberParts = right.toString().split(".");
     
     var leftDecimalPlaces = leftNumberParts.length > 1 ? leftNumberParts[1].length : 0;
     var rightDecimalPlaces = rightNumberParts.length > 1 ? rightNumberParts[1].length : 0;
 
-	var largest = Math.max(leftDecimalPlaces, rightDecimalPlaces);
+    var largest = Math.max(leftDecimalPlaces, rightDecimalPlaces);
     var commonFactor = Math.pow(10, largest);
 	
 	function makeInt(n) {
