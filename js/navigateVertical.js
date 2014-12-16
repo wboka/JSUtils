@@ -2,7 +2,7 @@
  *  navigateVertical - plugin by Wayne Boka (@wboka)
  *  Documentation found at https://github.com/wboka/JSUtils/blob/master/js/navigateVertical.js
  *  Function to navigate up and down a table
- *  Version 1.2.0
+ *  Version 1.2.1
  */
 function navigateVertical(e) {
 	var $this = $(this);
@@ -31,12 +31,11 @@ function navigateVertical(e) {
 					
 					$inputToFocus.focus().select();
 				}
-				
 			}
 		} else {
-			throw new Error(2, "Navigation not called in a tr.");
+			throw new Error(2, "navigateVertical() says, \"Navigation not called inside a tr.\"");
 		}
 	} else {
-		throw new Error(1, "Navigation not called in a td.");
+		throw new Error(1, "navigateVertical() says, \"Navigation not called inside a td.\"");
 	}
 }
