@@ -2,11 +2,12 @@
  *  navigateVertical - plugin by Wayne Boka (@wboka)
  *  Documentation found at https://github.com/wboka/JSUtils/blob/master/js/navigateVertical.js
  *  Function to navigate up and down a table
- *  Version 1.1.0
+ *  Version 1.2.0
  */
 function navigateVertical(e) {
 	var $this = $(this);
 	var $parentCell = $this.closest("td");
+	var types = "input, button";
 	
 	if ($parentCell.length > 0) {
 		var $parentRow = $parentCell.closest("tr");
@@ -16,6 +17,8 @@ function navigateVertical(e) {
 			var notSelect = !$this.is("select");
 			
 			if (notSelect && (e.which === 38 || e.which === 40)) {
+				var rowCount = $parentRow.closest("tbody").find("tr").length;
+				
 				if (e.which == 40 && rowCount - 1 > $parentRow.index()) {
 					$focusedRow = $parentRow.next("tr");
 				}
@@ -24,13 +27,9 @@ function navigateVertical(e) {
 				}
 				
 				if (typeof $focusedRow !== 'undefined') {
-					$focusedRow
-					.children()
-					.filter(":nth-child(" + ($parentCell.index() + 1) + ")")
-					.children()
-					.filter(":nth-child(" + (thisIndex + 1) + ")")
-					.focus()
-					.select();
+					var $inputToFocus = $focusedRow.find('td').eq($parentCell.index()).find('input, button').eq(thisIndex);
+					
+					$inputToFocus.focus().select();
 				}
 				
 			}
