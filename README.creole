@@ -4,3 +4,4 @@
 JavaScript Utilities
 
 * jsDecimalMath: js Plugin to fix incorrect floating-point math
+* formatJSON: js Plugin to convert JSON into a more readable format
