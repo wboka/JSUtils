@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON Formatter</title>
+</head>
+<body>
+	<script src="jsonFormat.js"></script>
+	<h1 style="text-align: center;">
+		JSON Formatter <button type="button" onclick="formatJSON.about();">About</button><br>
+		<button type="button" onclick="document.getElementById('formatted').innerHTML = formatJSON.format(document.getElementById('ta').value);">Format</button>
+		<button type="button" onclick="document.getElementById('formatted').innerHTML = formatJSON.viewSource();">Source</button>
+	</h1>
+	<textarea id="ta" rows="20" style="width: 100%;"></textarea>
+	<hr />
+	<h2>Formatted JSON / Source</h2>
+	<pre id="formatted"></pre>
+</body>
+</html>
